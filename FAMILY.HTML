@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FAMILY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<style>
+	body, html {height:100%; font-family:"Poppins", sans-serif;}
+	.bgimg {background-position: center; background-size: cover; background-image: url("FAMILY/5 (1).jpg"); min-height: 75%;}
+	.menu {display: none;}
+	*{box-sizing: border-box;}
+	.column {float:left; width:50%; padding:10px;}
+	.row:after {content:""; display:table; clear:both;}
+	</style>
+</head>
+
+<body background="GALLERY/BACKGROUND.PNG">
+
+<header class="w3-container w3-top w3-black w3-large">
+	<p class="w3-left w3-padding"><b>MY FAMILY</b></p>
+	<nav class="navbar"; width="100%"; align="right">
+		<ul>
+			<a href="HOME.HTML" class="w3-button w3-large" style="margin-right:20px" color="white"><b>HOME</b></a>
+		</ul>
+	</nav>
+</header>
+<br>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+	<div class="w3-display-middle w3-center">
+		<span class="w3-text-black" style="font-size:100px"><b>MY FAMILY</b></span>
+	</div>
+</header>
+
+<br>
+
+<div class="row">
+	<div class="column" id="about">
+	<div class="w3-content" style="max-width:700px">
+		<h3 class="w3-center w3-text-white"><b>A LITTLE ABOUT MY FAMILY</b></h3>
+		<p style="text-align:justify" class="big w3-text-white">When I was about 6 years old, I still lived with my parents and siblings. After my parents divorced, my siblings and I lived with our mother. Shortly after my parents divorced, my maternal grandparents chose to live with us until now. The difference now is that my grandmother died when I was 17 years old, and I was about to sit for the SPM exam that year.</p>
+		<img src="FAMILY/2.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+		<div class="w3-panel w3-leftbar w3-black">
+			<h4><b>MOTHER'S SIDE OF THE FAMILY</b></h4>
+			<p><b>PLACE:</b> TAMAN REKREASI GUNUNG LANG, IPOH, PERAK</p>
+		</div>
+	</div>
+	</div>
+
+<!-- Menu Container -->
+	<div class="column" id="MY PARENT'S SIBLINGS">
+	<div class="w3-content" style="max-width:700px">
+		<h3 class="w3-center w3-text-white"><b>MY PARENT'S SIBLINGS</b></h3>
+		<div class="w3-row w3-center w3-card w3-padding">
+			<a href="javascript:void(0)" onclick="openMenu(event, 'FATHER');" id="myLink">
+				<div class="w3-col s6 tablink w3-text-white"><h5>FATHER</h5></div>
+			</a>
+			<a href="javascript:void(0)" onclick="openMenu(event, 'MOTHER');">
+				<div class="w3-col s6 tablink w3-text-white"><h5>MOTHER</h5></div>
+			</a>
+		</div>
+
+		<div id="FATHER" class="w3-container menu w3-padding-48 w3-card w3-black">
+			<h5 class="w3-text-white"><b>1ST CHILD</b></h5>
+				<p class="w3-text-white">MY 1ST UNCLE AS "PAKLONG"</p><br>
+			<h5 class="w3-text-white"><b>2ND CHILD</b></h5>
+				<p class="w3-text-white">MY 2ND UNCLE AS "PAKNGAH"</p><br>
+			<h5 class="w3-text-white"><b>3RD CHILD</b></h5>
+				<p class="w3-text-white">MY FATHER AS "PAKLANG"</p><br>
+			<h5 class="w3-text-white"><b>4TH CHILD</b></h5>
+				<p class="w3-text-white">MY AUNT AS "ACU"</p>
+		</div>
+
+		<div id="MOTHER" class="w3-container menu w3-padding-48 w3-card w3-black">
+			<h5 class="w3-text-white"><b>1ST CHILD</b></h5>
+				<p class="w3-text-white">MY MOTHER AS "MAKLONG"</p><br>
+			<h5 class="w3-text-white"><b>2ND CHILD</b></h5>
+				<p class="w3-text-white">MY 1ST UNCLE AS "PAKNGAH"</p><br>
+			<h5 class="w3-text-white"><b>3RD CHILD</b></h5>
+				<p class="w3-text-white">MY 2ND UNCLE AS "PAKLANG"</p><br>
+			<h5 class="w3-text-white" ><b>4TH CHILD</b></h5>
+				<p class="w3-text-white">MY AUNT AS "ACU"</p>
+		</div>
+		<br>
+		<img class="w3-image" src="FAMILY/6.jpg">
+		<div class="w3-panel w3-leftbar w3-black">
+			<p>WE LOVE TO TRAVEL TOGETHER</p>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-black", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-black";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

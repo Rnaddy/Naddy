@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html background="black">
+
+<head>
+	<title>GALLERY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	body,h1 {font-family:"Poppins", sans-serif; color:white}
+	img {margin-bottom: -8px}
+	.w3-row-padding img {margin-bottom: 12px}
+	</style>
+</head>
+
+<body background="GALLERY/BACKGROUND.PNG">
+
+<!-- Header -->
+<header class="w3-center w3-margin-bottom">
+
+	<nav class="navbar"; width="100%"; align="right">
+		<ul>
+			<a href="HOME.HTML" class="w3-button w3-large" style="margin-right:20px"><b>HOME</b></a>
+		</ul>
+	</nav>
+	
+	<h1><b>MY RANDOM PICTURES</b></h1>
+	<p class="w3-padding-15"><button class="w3-button w3-white" onclick="myFunction()"><b>CLICK ME</b></button></p>
+</header>
+<br></br>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+	<div class="w3-third">
+		<img src="GALLERY/19.jpg" style="width:100%">
+		<img src="GALLERY/2.jpg" style="width:100%">
+		<img src="GALLERY/15.jpg" style="width:100%">
+		<img src="GALLERY/4.jpg" style="width:100%">
+		<img src="GALLERY/11.jpg" style="width:100%">
+		<img src="GALLERY/5 (1).jpg" style="width:100%">
+		<img src="GALLERY/3.jpg" style="width:100%">
+	</div>
+
+	<div class="w3-third">
+		<img src="GALLERY/7.jpg" style="width:100%">
+		<img src="GALLERY/8.jpg" style="width:100%">
+		<img src="GALLERY/9.jpg" style="width:100%">
+		<img src="GALLERY/12.jpg" style="width:100%">
+		<img src="GALLERY/18.jpg" style="width:100%">
+		<img src="GALLERY/23 (1).jpg" style="width:100%">
+	</div>
+
+	<div class="w3-third">
+		<img src="GALLERY/3.jpg" style="width:100%">
+		<img src="GALLERY/11.jpg" style="width:100%">
+		<img src="GALLERY/6.jpg" style="width:100%">
+		<img src="GALLERY/20.jpg" style="width:100%">
+		<img src="GALLERY/16.jpg" style="width:100%">
+		<img src="GALLERY/8.jpg" style="width:100%">
+	</div>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
